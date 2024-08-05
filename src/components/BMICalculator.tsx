@@ -11,8 +11,8 @@ function BMICalculator() {
       if (weight && height) {
         const weightNum = typeof weight === 'string' ? parseFloat(weight) : weight;
         const heightNum = typeof height === 'string' ? parseFloat(height) : height;
-  
-        const bmiValue = (weightNum / (heightNum * heightNum)) * 703;
+        const heightInMeters = heightNum / 100;
+        const bmiValue = weightNum / (heightInMeters * heightInMeters);
         setBmi(bmiValue);
   
         let statusValue = '';
@@ -33,7 +33,7 @@ function BMICalculator() {
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold mb-6">BMI Calculator</h1>
       <div className="mb-4">
-        <label className="block text-gray-700">Weight (lbs)</label>
+        <label className="block text-gray-700">Weight (KG)</label>
         <input
           type="number"
           value={weight}
@@ -42,7 +42,7 @@ function BMICalculator() {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700">Height (in)</label>
+        <label className="block text-gray-700">Height (CM)</label>
         <input
           type="number"
           value={height}
