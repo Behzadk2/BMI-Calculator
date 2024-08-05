@@ -1,3 +1,18 @@
+
+# BMI Calculator
+
+This is a simple BMI calculator project built with TypeScript, React, and Tailwind CSS.
+
+## Demo
+
+<video width="600" controls>
+  <source src="BMI.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
